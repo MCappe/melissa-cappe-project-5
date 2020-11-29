@@ -1,25 +1,83 @@
-import logo from './logo.svg';
 import './App.css';
+import { Component } from 'react';
+import axios from 'axios';
+import image from './murrayPlaceholder.jpg'
+import image2 from './api-transparent background for white background.png';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends Component {
+  constructor() {
+    super();
+    // Initialize state to keep track of the data coming back from the ListenNotes API
+    this.state = {
+      podcasts: []
+    }
+  }
+  
+
+  componentDidMount() {
+    axios({
+      url: 'https://listen-api.listennotes.com/api/v2/best_podcasts/',
+      method: 'GET',
+      params: {
+        'genre_id': 135,
+        // 'sort_by_date': 0,
+        // 'len_min': 10,
+        // 'len_max': 60
+      },
+      headers: {
+        'X-ListenAPI-Key': '47935c3ff89243c39e091cc561774aa5',
+      }
+    }).then((response) => {
+      console.log(response.data)
+    })
+  }
+
+  render() {
+    return (
+      <div className="podPage">
+        <div className="wrapper">
+        <h1>Hello Pod World</h1>
+        <form className="selections">
+          <label htmlFor="">
+            <select name="podcasts" id="pods" className="select">
+              <option value="trueCrime">True Crime</option>
+              <option value="business">Business</option>
+              <option value="comedy">Comedy</option>
+            </select>
+          </label>
+        </form>
+        <div className="container">
+          <ul>
+            <li>
+              <div className="imageContainer">
+                <img src={image} alt="Fill Murray"/>
+              </div>
+              <div className="podInfo">
+                <h2>Title</h2>
+                <p>Overview</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      
+      <div className="moreButton">
+        <button>More Titles</button>
+      </div>
+        </div>
+      <footer>
+          <p>© Melissa Cappe for <a href="https://junocollege.com/">Juno College</a></p>
+          <img className="listenLogo" src={image2} alt="Listen API logo"/>
+      </footer>
+
+
+
+
     </div>
-  );
+    )
+  }
 }
 
+
 export default App;
+
+
