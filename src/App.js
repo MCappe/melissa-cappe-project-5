@@ -13,16 +13,12 @@ class App extends Component {
     }
   }
   
-
-  componentDidMount() {
+  getPodcasts (idValue) {
     axios({
       url: 'https://listen-api.listennotes.com/api/v2/best_podcasts/',
       method: 'GET',
       params: {
-        'genre_id': 135,
-        // 'sort_by_date': 0,
-        // 'len_min': 10,
-        // 'len_max': 60
+        'genre_id': idValue
       },
       headers: {
         'X-ListenAPI-Key': '47935c3ff89243c39e091cc561774aa5',
@@ -30,6 +26,17 @@ class App extends Component {
     }).then((response) => {
       console.log(response.data)
     })
+
+  }
+
+  handleChange = (e) => {
+    const podOption = e.target.options[e.target.selectedIndex].value;
+    this.getPodcasts(podOption);
+
+    console.log(podOption)
+  }
+
+  componentDidMount() {
   }
 
   render() {
@@ -39,8 +46,8 @@ class App extends Component {
         <h1>Hello Pod World</h1>
         <form className="selections">
           <label htmlFor="">
-            <select name="podcasts" id="pods" className="select">
-              <option value="trueCrime">True Crime</option>
+            <select name="podcasts" id="pods" className="select" onChange={this.handleChange}>
+              <option value="135">True Crime</option>
               <option value="business">Business</option>
               <option value="comedy">Comedy</option>
             </select>
