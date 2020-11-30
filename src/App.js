@@ -1,8 +1,7 @@
 import './App.css';
 import { Component } from 'react';
 import axios from 'axios';
-import Select from './Select.js'
-import image from './murrayPlaceholder.jpg'
+import Podcasts from './Podcasts.js'
 import image2 from './api-transparent background for white background.png';
 
 
@@ -28,6 +27,9 @@ class App extends Component {
       }
     }).then((response) => {
       console.log(response.data)
+      // this.setState({
+      //   podcasts: response.data.podOption
+      // })
     })
 
   }
@@ -40,9 +42,13 @@ class App extends Component {
   }
 
   componentDidMount() {
+
   }
 
   render() {
+
+    
+
     return (
       <div className="podPage">
         <div className="wrapper">
@@ -50,22 +56,35 @@ class App extends Component {
             <h1>Hello Pod World</h1>
             <p>What podcast do you feel like listening to today?</p>
             <p>Select your genre and we'll tell you what's trending.</p>
-            <Select />
+            <div className="select">
+              <form className="selections">
+                <label htmlFor="">
+                  <select name="podcasts" id="pods" className="select" onChange={this.handleChange}>
+                    <option>Select a genre</option>
+                    <option value="135">True Crime</option>
+                    <option value="77">Sports</option>
+                    <option value="68">TV and Film</option>
+                    <option value="133">Comedy</option>
+                    <option value="99">News</option>
+                  </select>
+                </label>
+              </form>
+            </div>
           </header>
+          <Podcasts />
 
-        <div className="container">
-          <ul>
-            <li>
-              <div className="imageContainer">
-                <img src={image} alt="Fill Murray"/>
-              </div>
-              <div className="podInfo">
-                <h2>Title</h2>
-                <p>Overview</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+          {/* {
+            this.state.podcasts.map((pod) => {
+              return (
+                <Podcasts 
+                key={pod.id}
+                podImage={pod.image}
+                podTitle={pod.title}
+                podDescription={pod.description}/>
+              )
+            })
+          } */}
+
       
       <div className="moreButton">
         <button>More Titles</button>

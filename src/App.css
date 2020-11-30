@@ -24,7 +24,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 h1,
 .selections,
-p {
+header p {
   text-align: center;
 }
 
@@ -35,17 +35,25 @@ h1 {
 
 .container {
   display: flex;  
+  
+}
+
+.imageContainer img {
+  /* height: 200px;
+  width: 200px; */
   border: 2px solid black;
-  margin-bottom: 10px;
 }
 
 .container li {
   list-style: none;
 }
 
-.imageContainer img,
+.podInfo p {
+  font-style: italic;
+}
+
 .podInfo {
-  border: 2px solid black;
+  margin-left: 15px;
 }
 
 button {
