@@ -1,8 +1,11 @@
 import './App.css';
 import { Component } from 'react';
 import axios from 'axios';
+import Select from './Select.js'
 import image from './murrayPlaceholder.jpg'
 import image2 from './api-transparent background for white background.png';
+
+
 
 class App extends Component {
   constructor() {
@@ -43,16 +46,13 @@ class App extends Component {
     return (
       <div className="podPage">
         <div className="wrapper">
-        <h1>Hello Pod World</h1>
-        <form className="selections">
-          <label htmlFor="">
-            <select name="podcasts" id="pods" className="select" onChange={this.handleChange}>
-              <option value="135">True Crime</option>
-              <option value="business">Business</option>
-              <option value="comedy">Comedy</option>
-            </select>
-          </label>
-        </form>
+          <header>
+            <h1>Hello Pod World</h1>
+            <p>What podcast do you feel like listening to today?</p>
+            <p>Select your genre and we'll tell you what's trending.</p>
+            <Select />
+          </header>
+
         <div className="container">
           <ul>
             <li>
