@@ -27,9 +27,9 @@ class App extends Component {
       }
     }).then((response) => {
       console.log(response.data)
-      // this.setState({
-      //   podcasts: response.data.podOption
-      // })
+      this.setState({
+        podcasts: response.data.podcasts
+      })
     })
 
   }
@@ -37,12 +37,17 @@ class App extends Component {
   handleChange = (e) => {
     const podOption = e.target.options[e.target.selectedIndex].value;
     this.getPodcasts(podOption);
+    
 
     console.log(podOption)
   }
 
-  componentDidMount() {
+  refresh = () => {
+    window.location.reload();
+  }
 
+  componentDidMount() {
+    
   }
 
   render() {
@@ -73,7 +78,7 @@ class App extends Component {
           </header>
           <Podcasts />
 
-          {/* {
+          {
             this.state.podcasts.map((pod) => {
               return (
                 <Podcasts 
@@ -83,12 +88,8 @@ class App extends Component {
                 podDescription={pod.description}/>
               )
             })
-          } */}
+          }
 
-      
-      <div className="moreButton">
-        <button>More Titles</button>
-      </div>
         </div>
       <footer>
           <p>© Melissa Cappe for <a href="https://junocollege.com/">Juno College</a></p>
