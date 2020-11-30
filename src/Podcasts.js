@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import image1 from './murrayPlaceholder.jpg'
 
 class Podcasts extends Component {
     render() {

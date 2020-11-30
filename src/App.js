@@ -16,6 +16,7 @@ class App extends Component {
   }
   
   getPodcasts (idValue) {
+    // API call via axios
     axios({
       url: 'https://listen-api.listennotes.com/api/v2/best_podcasts/',
       method: 'GET',
@@ -27,6 +28,7 @@ class App extends Component {
       }
     }).then((response) => {
       console.log(response.data)
+      // setState to render the podcast information to the page
       this.setState({
         podcasts: response.data.podcasts
       })
@@ -35,15 +37,10 @@ class App extends Component {
   }
 
   handleChange = (e) => {
+    // onChange event handler to listen for user to select a genre in the select drop down menu
     const podOption = e.target.options[e.target.selectedIndex].value;
     this.getPodcasts(podOption);
-    
-
-    console.log(podOption)
-  }
-
-  refresh = () => {
-    window.location.reload();
+    // console.log(podOption);
   }
 
   componentDidMount() {
@@ -51,14 +48,11 @@ class App extends Component {
   }
 
   render() {
-
-    
-
     return (
       <div className="podPage">
-        <div className="wrapper">
+        <div className="wrapper main">
           <header>
-            <h1>Hello Pod World</h1>
+            <h1><span><i className="fas fa-microphone"></i></span> Hello Pod World <span><i className="fas fa-microphone"></i></span></h1>
             <p>What podcast do you feel like listening to today?</p>
             <p>Select your genre and we'll tell you what's trending.</p>
             <div className="select">
@@ -75,8 +69,7 @@ class App extends Component {
                 </label>
               </form>
             </div>
-          </header>
-          <Podcasts />
+          </header>          
 
           {
             this.state.podcasts.map((pod) => {
@@ -95,10 +88,6 @@ class App extends Component {
           <p>© Melissa Cappe for <a href="https://junocollege.com/">Juno College</a></p>
           <img className="listenLogo" src={image2} alt="Listen API logo"/>
       </footer>
-
-
-
-
     </div>
     )
   }
