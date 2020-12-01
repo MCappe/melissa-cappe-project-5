@@ -23,10 +23,12 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .podPage {
   background-color: aqua;
   background: url('./fancy-pants.jpg');
-  /* background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; */
   color: white;
+}
+
+header {
+  height: 91.5vh;
+  padding-top: 200px;
 }
 
 /* .select {

@@ -57,7 +57,7 @@ class App extends Component {
             <p className="animate__animated animate__backInLeft">What podcast do you feel like listening to today?</p>
             <p className="animate__animated animate__backInLeft">Select your genre and we'll tell you what's trending.</p>
             <div className="select">
-              <form className="selections">
+              <form className="selections animate__animated animate__backInLeft">
                 <label htmlFor="">
                   <select name="podcasts" id="pods" className="select" onChange={this.handleChange}>
                     <option>Select a genre</option>
