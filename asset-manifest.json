@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/https//Mcappe.github.io/melissa-cappe-project-5/static/css/main.89849f35.chunk.css",
+    "main.js": "/https//Mcappe.github.io/melissa-cappe-project-5/static/js/main.2391df5c.chunk.js",
+    "main.js.map": "/https//Mcappe.github.io/melissa-cappe-project-5/static/js/main.2391df5c.chunk.js.map",
+    "runtime-main.js": "/https//Mcappe.github.io/melissa-cappe-project-5/static/js/runtime-main.529401d5.js",
+    "runtime-main.js.map": "/https//Mcappe.github.io/melissa-cappe-project-5/static/js/runtime-main.529401d5.js.map",
+    "static/js/2.9d0865c1.chunk.js": "/https//Mcappe.github.io/melissa-cappe-project-5/static/js/2.9d0865c1.chunk.js",
+    "static/js/2.9d0865c1.chunk.js.map": "/https//Mcappe.github.io/melissa-cappe-project-5/static/js/2.9d0865c1.chunk.js.map",
+    "static/js/3.15c38f4a.chunk.js": "/https//Mcappe.github.io/melissa-cappe-project-5/static/js/3.15c38f4a.chunk.js",
+    "static/js/3.15c38f4a.chunk.js.map": "/https//Mcappe.github.io/melissa-cappe-project-5/static/js/3.15c38f4a.chunk.js.map",
+    "index.html": "/https//Mcappe.github.io/melissa-cappe-project-5/index.html",
+    "static/css/main.89849f35.chunk.css.map": "/https//Mcappe.github.io/melissa-cappe-project-5/static/css/main.89849f35.chunk.css.map",
+    "static/js/2.9d0865c1.chunk.js.LICENSE.txt": "/https//Mcappe.github.io/melissa-cappe-project-5/static/js/2.9d0865c1.chunk.js.LICENSE.txt",
+    "static/media/api-transparent background for white background.443fcec0.png": "/https//Mcappe.github.io/melissa-cappe-project-5/static/media/api-transparent background for white background.443fcec0.png",
+    "static/media/App.css": "/https//Mcappe.github.io/melissa-cappe-project-5/static/media/fancy-pants.52bbdfa6.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.529401d5.js",
+    "static/js/2.9d0865c1.chunk.js",
+    "static/css/main.89849f35.chunk.css",
+    "static/js/main.2391df5c.chunk.js"
+  ]
+}
