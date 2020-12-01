@@ -3,9 +3,7 @@ import { Component, createRef } from 'react';
 import axios from 'axios';
 import Podcasts from './Podcasts.js'
 import Select from './Select.js';
-// import animate.css from './animate.css';
 import image2 from './api-transparent background for white background.png';
-
 
 
 class App extends Component {
@@ -14,8 +12,9 @@ class App extends Component {
     // Initialize state to keep track of the data coming back from the ListenNotes API
     this.state = {
       podcasts: []
-    }
-    this.myRef = createRef();
+    };
+    this.resultsRef = createRef();
+    // this.topRef = createRef();
   }
   
   getPodcasts (idValue) {
@@ -46,8 +45,10 @@ class App extends Component {
     this.getPodcasts(podOption);
     // console.log(podOption);
   }
-  
-  executeScroll = () => this.myRef.current.scrollIntoView()
+
+  executeScroll = () => this.resultsRef.current.scrollIntoView()
+
+  // executeScroll = () => this.topRef.current.scrollIntoView()
 
   componentDidMount() {
     
@@ -57,10 +58,12 @@ class App extends Component {
     return (
       <div className="podPage">
         <div className="wrapper">
+          
           <Select 
           change={this.handleChange}/>
+          
 
-          <main ref={this.myRef}>
+          <main ref={this.resultsRef}>
           {
             this.state.podcasts.map((pod) => {
               return (
@@ -74,9 +77,8 @@ class App extends Component {
           }
           </main>
 
-          {/* <ScrollUp /> */}
           <div className="backToTop">
-            <button onClick={this.scrollButton}><i className="fas fa-arrow-up"></i></button>
+            <button><i className="fas fa-arrow-up"></i></button>
           </div>
 
         </div>
@@ -92,4 +94,5 @@ class App extends Component {
 
 export default App;
 
+// ref = { this.topRef }
 
