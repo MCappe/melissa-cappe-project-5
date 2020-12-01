@@ -1,8 +1,8 @@
 import './App.css';
-import { Component } from 'react';
+import { Component, createRef } from 'react';
 import axios from 'axios';
 import Podcasts from './Podcasts.js'
-// import Select from './Select.js';
+import Select from './Select.js';
 // import animate.css from './animate.css';
 import image2 from './api-transparent background for white background.png';
 
@@ -15,6 +15,7 @@ class App extends Component {
     this.state = {
       podcasts: []
     }
+    this.myRef = createRef();
   }
   
   getPodcasts (idValue) {
@@ -34,6 +35,7 @@ class App extends Component {
       this.setState({
         podcasts: response.data.podcasts
       })
+      this.executeScroll();
     })
 
   }
@@ -44,10 +46,8 @@ class App extends Component {
     this.getPodcasts(podOption);
     // console.log(podOption);
   }
-
-  scrollButton = () => {
-
-  }
+  
+  executeScroll = () => this.myRef.current.scrollIntoView()
 
   componentDidMount() {
     
@@ -57,27 +57,10 @@ class App extends Component {
     return (
       <div className="podPage">
         <div className="wrapper">
-          {/* <Select /> */}
-          <header>
-            <h1 className="animate__animated animate__backInLeft"><span><i className="fas fa-microphone"></i></span> Hello Pod World <span><i className="fas fa-microphone"></i></span></h1>
-            <p className="animate__animated animate__backInLeft">What podcast do you feel like listening to today?</p>
-            <p className="animate__animated animate__backInLeft">Select your genre and we'll tell you what's trending.</p>
-            <div className="select">
-              <form className="selections animate__animated animate__backInLeft">
-                <label htmlFor="">
-                  <select name="podcasts" id="pods" className="select" onChange={this.handleChange}>
-                    <option>Select a genre</option>
-                    <option value="135">True Crime</option>
-                    <option value="77">Sports</option>
-                    <option value="68">TV and Film</option>
-                    <option value="133">Comedy</option>
-                    <option value="99">News</option>
-                  </select>
-                </label>
-              </form>
-            </div>
-          </header>          
+          <Select 
+          change={this.handleChange}/>
 
+          <main ref={this.myRef}>
           {
             this.state.podcasts.map((pod) => {
               return (
@@ -89,9 +72,11 @@ class App extends Component {
               )
             })
           }
+          </main>
 
+          {/* <ScrollUp /> */}
           <div className="backToTop">
-            <button onClick={this.scrollButton}><i class="fas fa-arrow-up"></i></button>
+            <button onClick={this.scrollButton}><i className="fas fa-arrow-up"></i></button>
           </div>
 
         </div>

@@ -10,7 +10,7 @@ class Select extends Component {
                 <div className="select">
                     <form className="selections animate__animated animate__backInLeft">
                         <label htmlFor="">
-                            <select name="podcasts" id="pods" className="select" onChange={this.handleChange}>
+                            <select name="podcasts" id="pods" className="select" onChange={this.props.change}>
                                 <option>Select a genre</option>
                                 <option value="135">True Crime</option>
                                 <option value="77">Sports</option>
@@ -26,4 +26,4 @@ class Select extends Component {
     }
 }
 
-export default Header;
+export default Select;
