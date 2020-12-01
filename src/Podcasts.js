@@ -8,6 +8,7 @@ class Podcasts extends Component {
                     <ul>
                         <li className="container">
                             <div className="imageContainer">
+                                
                                 <img src={this.props.podImage} alt={this.props.podTitle}/>
                             </div>
                             <div className="podInfo">

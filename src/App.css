@@ -12,7 +12,6 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
   max-width: 1280px;
   width: 85%;
   margin: 0 auto;
-  /* height: 100vh; */
 }
 
 .selections {
@@ -27,22 +26,12 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 }
 
 header {
-  height: 91.5vh;
-  padding-top: 200px;
+  height: 100vh; 
+  padding-top: 250px;
 }
 
-/* .select {
-  appearance: none;
-  background-color: white;
-  border: none;
-  padding: 0 1em 0 0;
-  margin: 0 auto;
-  width: 40%;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: inherit;
-  line-height: inherit;
-  text-align: center;
+/* .podSection {
+  background-color: black;
 } */
 
 h1,
@@ -56,6 +45,9 @@ h1 {
   margin: 0;
 }
 
+.animate__animated.animate__backInLeft {
+  --animate-duration: 2s;
+}
 
 .container {
   display: flex;  
@@ -71,6 +63,8 @@ li.container {
   list-style: none;
 }
 
+
+
 .podInfo p {
   font-style: italic;
 }
@@ -79,17 +73,20 @@ li.container {
   margin-left: 15px;
 }
 
-/* button {
+button {
   padding: 8px;
   margin-bottom: 10px;
-  border: 2px solid royalblue;
-  background-color: salmon;
+  border: 2px solid white;
+  background-color: darkred;
+  color: lightgrey;
 }
 
 button:hover,
 button:focus {
   background-color: white;
-} */
+  border: 2px solid black;
+  color: black;
+}
 
 footer {
   background-color: darkred;

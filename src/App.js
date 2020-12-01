@@ -2,6 +2,7 @@ import './App.css';
 import { Component } from 'react';
 import axios from 'axios';
 import Podcasts from './Podcasts.js'
+// import Select from './Select.js';
 // import animate.css from './animate.css';
 import image2 from './api-transparent background for white background.png';
 
@@ -44,6 +45,10 @@ class App extends Component {
     // console.log(podOption);
   }
 
+  scrollButton = () => {
+
+  }
+
   componentDidMount() {
     
   }
@@ -51,7 +56,8 @@ class App extends Component {
   render() {
     return (
       <div className="podPage">
-        <div className="wrapper main">
+        <div className="wrapper">
+          {/* <Select /> */}
           <header>
             <h1 className="animate__animated animate__backInLeft"><span><i className="fas fa-microphone"></i></span> Hello Pod World <span><i className="fas fa-microphone"></i></span></h1>
             <p className="animate__animated animate__backInLeft">What podcast do you feel like listening to today?</p>
@@ -83,6 +89,10 @@ class App extends Component {
               )
             })
           }
+
+          <div className="backToTop">
+            <button onClick={this.scrollButton}><i class="fas fa-arrow-up"></i></button>
+          </div>
 
         </div>
       <footer>
