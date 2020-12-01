@@ -2,6 +2,7 @@ import './App.css';
 import { Component } from 'react';
 import axios from 'axios';
 import Podcasts from './Podcasts.js'
+// import animate.css from './animate.css';
 import image2 from './api-transparent background for white background.png';
 
 
@@ -52,9 +53,9 @@ class App extends Component {
       <div className="podPage">
         <div className="wrapper main">
           <header>
-            <h1><span><i className="fas fa-microphone"></i></span> Hello Pod World <span><i className="fas fa-microphone"></i></span></h1>
-            <p>What podcast do you feel like listening to today?</p>
-            <p>Select your genre and we'll tell you what's trending.</p>
+            <h1 className="animate__animated animate__backInLeft"><span><i className="fas fa-microphone"></i></span> Hello Pod World <span><i className="fas fa-microphone"></i></span></h1>
+            <p className="animate__animated animate__backInLeft">What podcast do you feel like listening to today?</p>
+            <p className="animate__animated animate__backInLeft">Select your genre and we'll tell you what's trending.</p>
             <div className="select">
               <form className="selections">
                 <label htmlFor="">
