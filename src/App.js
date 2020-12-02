@@ -14,7 +14,6 @@ class App extends Component {
       podcasts: []
     };
     this.resultsRef = createRef();
-    // this.topRef = createRef();
   }
   
   getPodcasts (idValue) {
@@ -35,7 +34,6 @@ class App extends Component {
         podcasts: response.data.podcasts
       })
       this.executeScroll();
-      // this.scrollBackUp();
     })
     
     
@@ -50,13 +48,7 @@ class App extends Component {
   
   executeScroll = () => this.resultsRef.current.scrollIntoView()
   
-  // scrollBackUp = () => this.topRef.current.scrollIntoView()
   
-  componentDidMount() {
-    
-    
-  }
-
   render() {
     return (
       <div className="podPage">
@@ -74,7 +66,7 @@ class App extends Component {
                 key={pod.id}
                 podImage={pod.image}
                 podTitle={pod.title}
-                podDescription={pod.description}/>
+                podDescription={pod.website}/>
               )
             })
           }
@@ -96,6 +88,4 @@ class App extends Component {
 
 
 export default App;
-
-// ref = { this.topRef }
 

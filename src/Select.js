@@ -10,13 +10,13 @@ class Select extends Component {
                 <div className="select">
                     <form className="selections animate__animated animate__backInLeft">
                         <label htmlFor="">
-                            <select name="podcasts" id="pods" className="select" onChange={this.props.change}>
+                            <select name="podcasts" id="pods" className="select" onChange={this.props.change} aria-label="Choose an option to sort the podcasts by genre">
                                 <option>Select a genre</option>
-                                <option value="135">True Crime</option>
-                                <option value="77">Sports</option>
-                                <option value="68">TV and Film</option>
-                                <option value="133">Comedy</option>
-                                <option value="99">News</option>
+                                <option value="135" aria-label="True Crime">True Crime</option>
+                                <option value="77" aria-label="Sports">Sports</option>
+                                <option value="68" aria-label="TV and Film">TV and Film</option>
+                                <option value="133" aria-label="Comedy">Comedy</option>
+                                <option value="99" aria-label="News">News</option>
                             </select>
                         </label>
                     </form>

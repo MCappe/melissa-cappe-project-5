@@ -12,6 +12,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
   max-width: 1280px;
   width: 85%;
   margin: 0 auto;
+  font-size: 62.5%;
 }
 
 .selections {
@@ -39,11 +40,32 @@ header p {
 h1 {
   padding: 10px;
   margin: 0;
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 .animate__animated.animate__backInLeft {
   --animate-duration: 2s;
 }
+
+select {
+  padding: 5px 15px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid darkred;
+  color: white;
+  font-size: 1.2rem;
+}
+
+
 
 .container {
   display: flex;  
@@ -67,12 +89,20 @@ li.container {
   margin-left: 15px;
 }
 
+.podInfo a {
+  text-decoration: none;
+  color: lightgrey;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 .fa-arrow-up {
   padding: 8px;
   margin-bottom: 10px;
   border: 2px solid white;
   background-color: darkred;
   color: lightgrey;
+  font-size: 1.2rem;
 }
 
 .fa-arrow-up:hover,
@@ -80,6 +110,7 @@ li.container {
   background-color: white;
   border: 2px solid black;
   color: black;
+
 }
 
 footer {
@@ -89,6 +120,7 @@ footer {
 
 footer p {
   padding-top: 10px;
+  font-size: 1rem;
 }
 
 footer a {
@@ -108,12 +140,16 @@ footer a:focus {
 
 /* Responsive Design */
 
-/* Portrait tablet and small desktops */
-@media (max-width: 940px) {
-}
-
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
   .container {
     flex-direction: column;
   }
@@ -124,6 +160,12 @@ footer a:focus {
     margin-right: auto;
     margin-left: auto;
   }
+
+  .podInfo {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
 }
 
 /* Landscape phones and down */

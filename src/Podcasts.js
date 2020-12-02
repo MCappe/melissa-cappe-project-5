@@ -12,7 +12,8 @@ class Podcasts extends Component {
                             </div>
                             <div className="podInfo">
                                 <h2>{this.props.podTitle}</h2>
-                                <p>{this.props.podDescription}</p>
+                                <a href={this.props.podDescription} target="_blank" rel="noreferrer">Podcast Website</a>
+                        
                             </div>
                         </li>
                     </ul>
