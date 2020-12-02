@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/melissa-cappe-project-5/static/css/main.d4c8ee44.chunk.css",
-    "main.js": "/melissa-cappe-project-5/static/js/main.8305e504.chunk.js",
-    "main.js.map": "/melissa-cappe-project-5/static/js/main.8305e504.chunk.js.map",
+    "main.css": "/melissa-cappe-project-5/static/css/main.744c3a65.chunk.css",
+    "main.js": "/melissa-cappe-project-5/static/js/main.98023d6d.chunk.js",
+    "main.js.map": "/melissa-cappe-project-5/static/js/main.98023d6d.chunk.js.map",
     "runtime-main.js": "/melissa-cappe-project-5/static/js/runtime-main.dc4299c5.js",
     "runtime-main.js.map": "/melissa-cappe-project-5/static/js/runtime-main.dc4299c5.js.map",
     "static/js/2.9d0865c1.chunk.js": "/melissa-cappe-project-5/static/js/2.9d0865c1.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.15c38f4a.chunk.js": "/melissa-cappe-project-5/static/js/3.15c38f4a.chunk.js",
     "static/js/3.15c38f4a.chunk.js.map": "/melissa-cappe-project-5/static/js/3.15c38f4a.chunk.js.map",
     "index.html": "/melissa-cappe-project-5/index.html",
-    "static/css/main.d4c8ee44.chunk.css.map": "/melissa-cappe-project-5/static/css/main.d4c8ee44.chunk.css.map",
+    "static/css/main.744c3a65.chunk.css.map": "/melissa-cappe-project-5/static/css/main.744c3a65.chunk.css.map",
     "static/js/2.9d0865c1.chunk.js.LICENSE.txt": "/melissa-cappe-project-5/static/js/2.9d0865c1.chunk.js.LICENSE.txt",
     "static/media/api-transparent background for white background.443fcec0.png": "/melissa-cappe-project-5/static/media/api-transparent background for white background.443fcec0.png",
     "static/media/App.css": "/melissa-cappe-project-5/static/media/fancy-pants.52bbdfa6.jpg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.dc4299c5.js",
     "static/js/2.9d0865c1.chunk.js",
-    "static/css/main.d4c8ee44.chunk.css",
-    "static/js/main.8305e504.chunk.js"
+    "static/css/main.744c3a65.chunk.css",
+    "static/js/main.98023d6d.chunk.js"
   ]
 }
