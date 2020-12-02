@@ -30,10 +30,6 @@ header {
   padding-top: 250px;
 }
 
-/* .podSection {
-  background-color: black;
-} */
-
 h1,
 .selections,
 header p {
@@ -71,7 +67,7 @@ li.container {
   margin-left: 15px;
 }
 
-button {
+.fa-arrow-up {
   padding: 8px;
   margin-bottom: 10px;
   border: 2px solid white;
@@ -79,8 +75,8 @@ button {
   color: lightgrey;
 }
 
-button:hover,
-button:focus {
+.fa-arrow-up:hover,
+.fa-arrow-up:focus {
   background-color: white;
   border: 2px solid black;
   color: black;
@@ -118,6 +114,16 @@ footer a:focus {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .imageContainer img {
+    width: 90%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 /* Landscape phones and down */

@@ -35,22 +35,25 @@ class App extends Component {
         podcasts: response.data.podcasts
       })
       this.executeScroll();
+      // this.scrollBackUp();
     })
-
+    
+    
   }
-
+  
   handleChange = (e) => {
     // onChange event handler to listen for user to select a genre in the select drop down menu
     const podOption = e.target.options[e.target.selectedIndex].value;
     this.getPodcasts(podOption);
     // console.log(podOption);
   }
-
+  
   executeScroll = () => this.resultsRef.current.scrollIntoView()
-
-  // executeScroll = () => this.topRef.current.scrollIntoView()
-
+  
+  // scrollBackUp = () => this.topRef.current.scrollIntoView()
+  
   componentDidMount() {
+    
     
   }
 
@@ -78,7 +81,7 @@ class App extends Component {
           </main>
 
           <div className="backToTop">
-            <button><i className="fas fa-arrow-up"></i></button>
+            <a href="#header" className="backUp"><i className="fas fa-arrow-up"></i></a>
           </div>
 
         </div>
