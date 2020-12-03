@@ -36,12 +36,7 @@ class App extends Component {
       })
       // call execute scrolling function
       this.executeScroll();
-    }).catch((error) => {
-      this.setState({
-        errorLoadingData: true
-      })
-    })
-    
+    })    
     
   }
   
@@ -49,7 +44,6 @@ class App extends Component {
     // onChange event handler to listen for user to select a genre in the select drop down menu
     const podOption = e.target.options[e.target.selectedIndex].value;
     this.getPodcasts(podOption);
-    
   }
   
   // execute scroll function to scroll down to podcasts once option selected from dropdown
@@ -61,10 +55,8 @@ class App extends Component {
       <div className="podPage">
         <div className="wrapper">
           
-          <Select 
-          change={this.handleChange}/>
+          <Select change={this.handleChange}/>
           
-
           <main ref={this.resultsRef}>
           {
             // map through podcast options to render to page
@@ -74,20 +66,21 @@ class App extends Component {
                 key={pod.id}
                 podImage={pod.image}
                 podTitle={pod.title}
-                  podUrl={pod.website ? pod.website : 'No Website available'}/>
+                // In the event there is no website for the selected podcast, still make the button clickable, but let the user know there is no website available
+                podUrl={pod.website ? pod.website : "No Website available"}/>
               )
             })
           }
           </main>
 
           <div className="backToTop">
-            <a href="#header" className="backUp"><i className="fas fa-arrow-up"></i></a>
+            <a href="#header"><i className="fas fa-arrow-up"></i><span class="srOnly">Scroll back to the top</span></a>
           </div>
 
         </div>
       <footer>
           <p>© Melissa Cappe for <a href="https://junocollege.com/">Juno College</a></p>
-          <img className="listenLogo" src={image2} alt="Listen API logo"/>
+          <img className="listenLogo" src={image2} alt="Listen Notes API logo"/>
       </footer>
     </div>
     )
@@ -96,4 +89,6 @@ class App extends Component {
 
 
 export default App;
+
+// I had originally intended to show the podcast description, but unfortunately the data wasn't consistent for each podcast. A lot of them had incorrect descriptions or HTML elements embedded, which I couldn't remove without regex. As part of my stretch goals, I will be working through this issue to be able to render the description under the title (as well as the url).
 

@@ -8,10 +8,6 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .srOnly { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-    /* font-family: 'Epilogue', sans-serif;
-
-    font-family: 'Roboto', sans-serif; */
-
 .wrapper {
   max-width: 1280px;
   width: 85%;
@@ -153,7 +149,8 @@ footer a {
 
 footer a:hover,
 footer a:focus {
-  color: lightgray;
+  color: black;
+  font-weight: bold;
 }
 
 .listenLogo {
@@ -163,7 +160,7 @@ footer a:focus {
 
 /* Responsive Design */
 
-/* Landscape phone to portrait tablet */
+/* Landscape phone and down */
 @media (max-width: 768px) {
   .wrapper {
     margin: auto;
@@ -202,8 +199,4 @@ footer a:focus {
     margin-left: 0;
   }
 
-}
-
-/* Landscape phones and down */
-@media (max-width: 480px) {
 }

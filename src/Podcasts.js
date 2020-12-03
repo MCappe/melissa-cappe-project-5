@@ -1,11 +1,10 @@
 import { Component } from 'react';
 
-// Podcast render Component
 class Podcasts extends Component {
     render() {
         return (
             <div>
-                <section className="podSection">
+                <section>
                     <ul>
                         <li className="container">
                             <div className="imageContainer">
@@ -26,4 +25,3 @@ class Podcasts extends Component {
 
 export default Podcasts;
 
-// { photoObj.description ? photoObj.description : 'Image of puppy' }
