@@ -13,6 +13,7 @@ class App extends Component {
     this.state = {
       podcasts: []
     };
+    // Initialize scrolling function
     this.resultsRef = createRef();
   }
   
@@ -33,6 +34,7 @@ class App extends Component {
       this.setState({
         podcasts: response.data.podcasts
       })
+      // call execute scrolling function
       this.executeScroll();
     })
     
@@ -43,9 +45,10 @@ class App extends Component {
     // onChange event handler to listen for user to select a genre in the select drop down menu
     const podOption = e.target.options[e.target.selectedIndex].value;
     this.getPodcasts(podOption);
-    // console.log(podOption);
+    
   }
   
+  // execute scroll function to scroll down to podcasts once option selected from dropdown
   executeScroll = () => this.resultsRef.current.scrollIntoView()
   
   
@@ -60,6 +63,7 @@ class App extends Component {
 
           <main ref={this.resultsRef}>
           {
+            // map through podcast options to render to page
             this.state.podcasts.map((pod) => {
               return (
                 <Podcasts 

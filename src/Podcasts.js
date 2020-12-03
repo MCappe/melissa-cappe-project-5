@@ -1,5 +1,6 @@
 import { Component } from 'react';
 
+// Podcast render Component
 class Podcasts extends Component {
     render() {
         return (
@@ -12,7 +13,7 @@ class Podcasts extends Component {
                             </div>
                             <div className="podInfo">
                                 <h2>{this.props.podTitle}</h2>
-                                <a href={this.props.podDescription} target="_blank" rel="noreferrer">Podcast Website</a>
+                                <a href={this.props.podDescription} target="_blank" rel="noopener noreferrer">Podcast Website</a>
                         
                             </div>
                         </li>

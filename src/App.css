@@ -8,11 +8,16 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .srOnly { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
+    /* font-family: 'Epilogue', sans-serif;
+
+    font-family: 'Roboto', sans-serif; */
+
 .wrapper {
   max-width: 1280px;
   width: 85%;
   margin: 0 auto;
   font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
 }
 
 .selections {
@@ -41,6 +46,7 @@ h1 {
   padding: 10px;
   margin: 0;
   font-size: 4rem;
+  font-family: 'Epilogue', sans-serif;
 }
 
 p {
@@ -55,6 +61,10 @@ h2 {
   --animate-duration: 2s;
 }
 
+form {
+  padding-top: 25px;
+}
+
 select {
   padding: 5px 15px;
   background: transparent;
@@ -65,35 +75,37 @@ select {
   font-size: 1.2rem;
 }
 
-
-
 .container {
   display: flex;  
   border: 2px solid white;
+  border-radius: 25px;
+  background-color: black;
 }
 
 .imageContainer img {
   border: 2px solid white;
   margin: 5px;
+  border-radius: 25px;
 }
 
 li.container {
   list-style: none;
 }
 
-.podInfo p {
-  font-style: italic;
-}
 
 .podInfo {
-  margin-left: 15px;
+  margin-left: 30px;
+  margin-top: 50px;
 }
 
 .podInfo a {
   text-decoration: none;
-  color: lightgrey;
+  color: white;
   font-weight: bold;
   font-size: 1.2rem;
+  background-color: darkred;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .fa-arrow-up {
@@ -103,6 +115,7 @@ li.container {
   background-color: darkred;
   color: lightgrey;
   font-size: 1.2rem;
+  border-radius: 25px;
 }
 
 .fa-arrow-up:hover,
@@ -116,6 +129,7 @@ li.container {
 footer {
   background-color: darkred;
   text-align: center;
+  font-family: 'Epilogue', sans-serif;
 }
 
 footer p {
@@ -142,6 +156,10 @@ footer a:focus {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+  header {
+    padding-top: 100px;
+  }
+
   h1 {
     font-size: 3rem;
   }
