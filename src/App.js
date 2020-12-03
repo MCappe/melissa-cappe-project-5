@@ -36,6 +36,10 @@ class App extends Component {
       })
       // call execute scrolling function
       this.executeScroll();
+    }).catch((error) => {
+      this.setState({
+        errorLoadingData: true
+      })
     })
     
     
@@ -70,7 +74,7 @@ class App extends Component {
                 key={pod.id}
                 podImage={pod.image}
                 podTitle={pod.title}
-                podDescription={pod.website}/>
+                  podUrl={pod.website ? pod.website : 'No Website available'}/>
               )
             })
           }
