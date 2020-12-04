@@ -29,7 +29,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 header {
   height: 100vh; 
-  padding-top: 250px;
+  padding-top: 200px;
 }
 
 h1,

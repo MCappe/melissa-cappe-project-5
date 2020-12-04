@@ -29,7 +29,6 @@ class App extends Component {
         'X-ListenAPI-Key': '47935c3ff89243c39e091cc561774aa5',
       }
     }).then((response) => {
-      console.log(response.data)
       // setState to render the podcast information to the page
       this.setState({
         podcasts: response.data.podcasts
@@ -74,13 +73,15 @@ class App extends Component {
           </main>
 
           <div className="backToTop">
-            <a href="#header"><i className="fas fa-arrow-up"></i><span class="srOnly">Scroll back to the top</span></a>
+            <a href="#header"><i className="fas fa-arrow-up"></i><span className="srOnly">Scroll back to the top</span></a>
           </div>
 
         </div>
       <footer>
+        <div className="wrapper">
           <p>© Melissa Cappe for <a href="https://junocollege.com/">Juno College</a></p>
           <img className="listenLogo" src={image2} alt="Listen Notes API logo"/>
+        </div>
       </footer>
     </div>
     )
@@ -90,5 +91,5 @@ class App extends Component {
 
 export default App;
 
-// I had originally intended to show the podcast description, but unfortunately the data wasn't consistent for each podcast. A lot of them had incorrect descriptions or HTML elements embedded, which I couldn't remove without regex. As part of my stretch goals, I will be working through this issue to be able to render the description under the title (as well as the url).
+
 
